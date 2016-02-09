@@ -49,6 +49,15 @@ $color_shark_approx: rgba(38, 32, 40, 1);
 
 .jumbotron{
   margin: 0;
+  height: 600px;
 }
-.jumbotron h1{ text-align: center;}
-.jumbotron h2{ text-align: center; margin-bottom: 30px;}
+.jumbotron h1{ margin-top: 100px; text-align: center;}
+.jumbotron h2{ margin-top: 50px; text-align: center; margin-bottom: 100px;}
+//urls
+$url_0: url('../images/BG.jpg');
+
+#main {
+	background: $url_0 no-repeat center center;
+	background-size: contain;
+	text-align: center;
+}
