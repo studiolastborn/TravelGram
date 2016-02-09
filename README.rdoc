@@ -8,5 +8,15 @@ description: text
 - location must be present
 - location must be from 5 characters and less than 150 characters
 - description must be present
-- description must be from 20 to 500 characters
+- description must be from 5 to 500 characters
 - traveler_id must be present
+
+testing specs for travelers:
+name: string
+email: string
+
+- name must be present
+- name must be from 3 to 40 characters
+- email must be present
+- email must be unique (email used for login)
+- email must be valid
