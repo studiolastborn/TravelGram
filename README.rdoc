@@ -1,28 +1,12 @@
-== README
+testing specs for journeys:
+title: string
+location: text
+description: text
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- title must be present
+- title must be from 5 to 100 characters
+- location must be present
+- location must be from 5 characters and less than 150 characters
+- description must be present
+- description must be from 20 to 500 characters
+- traveler_id must be present
