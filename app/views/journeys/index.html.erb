@@ -1,0 +1,14 @@
+<h1>All journeys</h1>
+<hr>
+<div class="row">
+<% @journeys.each do |journey| %>
+
+  <div class="col-xs-6 col-md-4">
+  <section class="journey_pic center">picture</section>
+  <h4><%= link_to journey.title, " " %></h4>
+  <p><%= journey.location %></p>
+  <p><%= time_ago_in_words (journey.created_at) %> ago</p>
+  </div>
+ 
+<% end %>
+</div> 
