@@ -5,7 +5,7 @@
 
   <div class="col-xs-6 col-md-4">
   <section class="journey_pic center">picture</section>
-  <h4><%= link_to journey.title, " " %></h4>
+  <h4><%= link_to journey.title, journey_path(journey) %></h4>
   <p><%= journey.location %></p>
   <p><%= time_ago_in_words (journey.created_at) %> ago</p>
   </div>
