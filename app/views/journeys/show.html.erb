@@ -1,7 +1,14 @@
 <%= render 'shared/page_title', title: @journey.title %>
 
 <div class="row">
+    <% if @journey.picture? %>
+    <%= image_tag(@journey.picture.url, class:"showimg") %>
+    <% end %>
+</div>
+    
+<div class="row">
 <div class="col-md-6 col-md-offset-3 showdiv">
+    
     <h3>in <%= @journey.location %></h3>
     <h4><%= simple_format(@journey.description) %></h4>
     <p>written by <%= @journey.traveler.name %></p>

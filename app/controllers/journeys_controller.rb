@@ -34,6 +34,6 @@ class JourneysController < ApplicationController
     
     private
       def journey_params
-        params.require(:journey).permit(:title, :location, :description)
+        params.require(:journey).permit(:title, :location, :description, :picture)
       end
 end
