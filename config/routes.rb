@@ -11,4 +11,6 @@ Rails.application.routes.draw do
  # delete '/journeys/:id', to:'journeys#destroy'
 
   resources :journeys
+  resources :travelers, except: [:new]
+  get '/register', to: 'travelers#new'
 end

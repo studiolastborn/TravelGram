@@ -20,3 +20,19 @@ email: string
 - email must be present
 - email must be unique (email used for login)
 - email must be valid
+
+Travelers
+
+What we have already:
+- Traveler model and validations
+- Travelers table with columns name and email
+
+What we need to do:
+- Add passwords to the travelers table
+- Use email as log in credentials, since it's unique
+- Ability to register new travelers to use the ap
+- Ability to display travelers profile
+-  Ability to list Travelers using the app
+- Ability for travelers to log in and log out of the app
+- Restrict actions like create, edit journeys to logged in travelers
+- Restricting edit of journeys by travelers who created the journeys

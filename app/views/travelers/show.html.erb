@@ -1,9 +1,11 @@
-<%= render 'shared/page_title', title: 'All journeys' %>
+<%= render 'shared/page_title', title: @traveler.name + "'s Journeys" %>
+
+<hr>
 
 <div class="row">
-<% @journeys.each do |journey| %>
+<% @traveler.journeys.each do |journey| %>
     
-  <div class="col-xs-6 col-md-4">
+  <div class="col-xs-6 col-md-4 thumbnails">
     <div class="indexPicture">
       <%= image_tag(journey.picture.url, size: "300x300") if journey.picture?%>
     </div>

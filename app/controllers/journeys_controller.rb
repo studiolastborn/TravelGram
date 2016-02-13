@@ -10,7 +10,7 @@ class JourneysController < ApplicationController
     end
     def create
       @journey=Journey.new(journey_params)
-      @journey.traveler = Traveler.find(1)
+      @journey.traveler = Traveler.first #change later on
         if @journey.save
           flash[:success] = "Your journey was posted successfully!"
           redirect_to journeys_path
