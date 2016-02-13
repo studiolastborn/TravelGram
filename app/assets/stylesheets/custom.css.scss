@@ -99,7 +99,10 @@ span .picture {
   margin-left: auto;
   margin-right: auto;
 }
-
+.thumbnails {
+	height : 400px;
+}
+.textcenter{text-align: center;}
 /*@media(min-width:800px) {
 	.jumbotron h1 {
 		font-size: 50px;

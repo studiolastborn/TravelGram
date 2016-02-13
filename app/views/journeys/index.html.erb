@@ -1,5 +1,7 @@
 <%= render 'shared/page_title', title: 'All journeys' %>
 
+<%= will_paginate %>
+
 <div class="row">
 <% @journeys.each do |journey| %>
     
@@ -14,3 +16,5 @@
  
 <% end %>
 </div> 
+
+<%= will_paginate %>

@@ -1,9 +1,9 @@
 <%= render 'shared/page_title', title: @traveler.name + "'s Journeys" %>
-
-<hr>
+<h5 class="textcenter"><%= link_to "Edit your profile", edit_traveler_path(@traveler) %></h5>
+<%= will_paginate @journeys %>
 
 <div class="row">
-<% @traveler.journeys.each do |journey| %>
+<% @journeys.each do |journey| %>
     
   <div class="col-xs-6 col-md-4 thumbnails">
     <div class="indexPicture">

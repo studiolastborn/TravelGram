@@ -11,7 +11,7 @@
     
     <h3>in <%= @journey.location %></h3>
     <h4><%= simple_format(@journey.description) %></h4>
-    <p>written by <%= @journey.traveler.name %></p>
+    <p>written by <%= link_to @journey.traveler.name, traveler_path(@journey.traveler) %></p>
     <p><%= link_to "Edit", edit_journey_path %></p>
     
     <p> updated <%= time_ago_in_words (@journey.updated_at) %> ago</p>
