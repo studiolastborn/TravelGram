@@ -1,5 +1,5 @@
 <%= render 'shared/page_title', title: @traveler.name + "'s Journeys" %>
-<h5 class="textcenter"><%= link_to "Edit your profile", edit_traveler_path(@traveler) %></h5>
+
 <%= will_paginate @journeys %>
 
 <div class="row">
