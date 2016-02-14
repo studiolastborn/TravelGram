@@ -1,7 +1,9 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
  
+
  //colors
 $color_frangipani_approx: #ffe0ba;
 $color_raw_sienna_approx: #cc804d;
@@ -13,10 +15,21 @@ $black: black;
 $white: white;
 $color_shark_approx: rgba(38, 32, 40, 1);
 $color_conifer_30_approx: rgba(175, 209, 82, 0.3);
+
+h1, h2, h3, h4, p, span, li, .btn{
+	font-family: 'Indie Flower', cursive;
+}
+h4{
+	font-size: 2em;
+}
+p{
+	font-size: 1.2em;
+}
 //navbar
+
 .item, .dropitem {
 	color: $white;
-	font-size: (1.5)em;
+	font-size: 1.5em;
 	text-align: center;
 	&:hover {
 		color: $color_blue_violet_approx;
@@ -26,7 +39,7 @@ $color_conifer_30_approx: rgba(175, 209, 82, 0.3);
 	}
 }
 .item {
-	width: 100px;
+	width: 120px;
 }
 .dropdown-menu{
 	width: 100px;
@@ -36,7 +49,7 @@ $color_conifer_30_approx: rgba(175, 209, 82, 0.3);
 #logo {
 	margin-left: 10px;
 	margin-right: 10px;
-	font-size: (1.5)em;
+	font-size: 1.5em;
 	color: $color_jordy_blue_approx;
 	font-weight: bold;
 	&:hover {
@@ -107,6 +120,10 @@ span .picture {
 }
 .thumbnails {
 	height : 400px;
+}
+.index{
+	border: 1px solid #fff;
+	margin-left: 30px;
 }
 .textcenter{text-align: center;}
 /*@media(min-width:800px) {

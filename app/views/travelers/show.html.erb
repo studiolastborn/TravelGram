@@ -6,14 +6,15 @@
 <% @journeys.each do |journey| %>
     
   <div class="col-xs-6 col-md-4 thumbnails">
-    <div class="indexPicture">
+    <div class="index">
       <%= image_tag(journey.picture.url, size: "300x300") if journey.picture?%>
-    </div>
-    <h4><%= link_to journey.title, journey_path(journey) %></h4>
+    
+    <h3><%= link_to journey.title, journey_path(journey) %></h3>
     <p><%= journey.location %></p>
     <p><%= time_ago_in_words (journey.created_at) %> ago</p>
     <p><%= link_to 'Destroy', journey_path(journey), 
               method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    </div>
   </div>
  
 <% end %>

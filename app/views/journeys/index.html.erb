@@ -6,12 +6,12 @@
 <% @journeys.each do |journey| %>
     
   <div class="col-xs-6 col-md-4">
-    <div class="indexPicture">
+    <div class="index">
       <%= image_tag(journey.picture.url, size: "300x300") if journey.picture?%>
-    </div>
     <h4><%= link_to journey.title, journey_path(journey) %></h4>
     <p><%= journey.location %></p>
     <p><%= time_ago_in_words (journey.created_at) %> ago</p>
+    </div>
   </div>
  
 <% end %>
