@@ -57,5 +57,5 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'fog', '1.23.0'
+  gem 'fog', '1.36.0'
 end
