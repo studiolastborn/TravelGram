@@ -1,6 +1,6 @@
 class JourneysController < ApplicationController
   
-    before_action :set_journey, only: [:show, :edit, :update]
+    before_action :set_journey, only: [:show, :edit, :update, :destroy]
     before_action :require_user, except: [:show, :index]
     before_action :require_same_user, only: [:edit, :update]
   
@@ -40,6 +40,10 @@ class JourneysController < ApplicationController
       end
     end
     
+    def destroy
+      @journey.destroy
+      redirect_to traveler_path(current_user)
+    end
     
     private
       def journey_params

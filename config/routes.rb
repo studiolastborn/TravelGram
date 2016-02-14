@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   resources :journeys
   resources :travelers, except: [:new]
   get '/register', to: 'travelers#new'
-  
   get '/login', to: 'logins#new'
   post '/login', to: 'logins#create'
   get '/logout', to: 'logins#destroy'
