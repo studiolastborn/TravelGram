@@ -25,7 +25,7 @@
 <script type="text/javascript">
   $('#journey_picture').bind('change', function(){
     size_in_megabytes = this.file[0].size/1024/1024;
-    if (size_in_megabytes > 10){
+    if (size_in_megabytes > 5){
       alert("Maximum image size is 10MB. Please choose another one.");
     }
   })
