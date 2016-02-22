@@ -1,10 +1,12 @@
-if Rails.env.production?
-  CarrierWave.configure do |config|
-    config.fog_credentials = {
-      :provider => 'AWS',
-      :aws_access_key_id => ENV['S3_ACCESS_KEY'],
-      :aws_secret_access_key => ENV['S3_SECRET_KEY']
-    }
-      config.aws_bucket = ENV['S3_BUCKET']
-  end
-end
+CarrierWave.configure do |config|
+  config.storage    = :aws
+  config.aws_bucket = ENV['S3_BUCKET_NAME']
+  config.aws_acl    = :public_read
+  config.asset_host = 'travelgram2016.s3-website.ap-northeast-2.amazonaws.com'
+  config.aws_authenticated_url_expiration = 60 * 60 * 24 * 365
+
+  config.aws_credentials = {
+    access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
+    secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
+  }
+end if Rails.env == 'production'
